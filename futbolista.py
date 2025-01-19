@@ -15,6 +15,24 @@ class Futbolista(Persona,Deportista):
 
          Futbolista.listaFutbolistas.append(self)
 
+     def getGolesMarcados(self):
+         return self._golesMarcados
+
+     def setGolesMarcados(self, golesMarcados):
+         self._golesMarcados= golesMarcados
+
+     def getTarjetasRojas(self):
+         return self._tarjetasRojas
+
+     def setTarjetasRojas(self, tarjetasRojas):
+         self._tarjetasRojas = tarjetasRojas
+
+     def getPiernaHabil(self):
+         return self._piernaHabil
+
+     def setPiernaHabil(self, piernaHabil):
+         self._piernaHabil = piernaHabil
+
      def getNombre(self):
         return self._nombre
 
@@ -57,5 +75,5 @@ class Futbolista(Persona,Deportista):
                  "Mi nombre es " + self._nombre +
                  " soy profesional en el deporte " + self._deporte +
                  " Tengo " + str(self._edad) + " años de edad y llevo " +
-                 str(self._anosPracticando) + " años en el deporte"
+                 str(self._añosPracticando) + " años en el deporte"
          )
