@@ -6,9 +6,9 @@ class Futbolista(Persona,Deportista):
      listaFutbolistas = []
 
 
-     def __init__(self,nombre,edad,altura,sexo,anosPracticando , golesMarcados,tarjetasRojas,piernaHabil):
+     def __init__(self,nombre,edad,altura,sexo,añosPracticando , golesMarcados,tarjetasRojas,piernaHabil):
          Persona.__init__(self,nombre,edad,altura,sexo)
-         Deportista.__init__(self,anosPracticando,"Futbol")
+         Deportista.__init__(self,añosPracticando,"Futbol ")
          self._golesMarcados = golesMarcados
          self._tarjetasRojas= tarjetasRojas
          self._piernaHabil = piernaHabil
@@ -42,15 +42,20 @@ class Futbolista(Persona,Deportista):
      def getDeporte(self):
         return self._deporte
 
-     def getanosPracticando(self):
-        return self._anosPracticando
+     def getAñosPracticando(self):
+        return self._añosPracticando
 
      def setDeporte(self,deporte):
         self._deporte= Deportista.setDeporte(self,deporte)
 
-     def setAnosPracticando(self,anosPracticando):
-        self._anosPracticando= Deportista.setAnosPracticando(self,anosPracticando)
+     def setAñosPracticando(self,añosPracticando):
+        self._añosPracticando= Deportista.setAñosPracticando(self,añosPracticando)
 
 
      def __str__(self):
-         return "Mi nombre es "+self._nombre +" soy profesional en el deporte "+self._deporte+" Tengo "+ self._edad +" años de edad y llevo "+ self._anosPracticando +" años en el deporte"
+         return (
+                 "Mi nombre es " + self._nombre +
+                 " soy profesional en el deporte " + self._deporte +
+                 " Tengo " + str(self._edad) + " años de edad y llevo " +
+                 str(self._anosPracticando) + " años en el deporte"
+         )
